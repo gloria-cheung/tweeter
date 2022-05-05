@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 40px;
+}
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.write {
+  display: flex;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.arrow {
+  color: red;
+}
