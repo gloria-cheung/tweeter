@@ -9,6 +9,8 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-bottom: 0.5em;
+  z-index: 1;
+  position: absolute;
 }
 
 .logo {
@@ -34,3 +36,4 @@ nav div {
 .arrow {
   color: red;
 }
+
