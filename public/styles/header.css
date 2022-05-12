@@ -23,6 +23,7 @@ h2 {
   text-align: center;
 }
 .header h2 {
+  /* position for caption is absolute so that the space collapses and can center just the avatar */
   position: absolute;
   bottom: -40px;
   margin: 0;
