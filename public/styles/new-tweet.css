@@ -29,6 +29,10 @@ form div button {
   font-family: "Bungee";
 }
 
+.exceed-count {
+  color: red;
+}
+
 textarea:focus {
   outline: 0;
 }
