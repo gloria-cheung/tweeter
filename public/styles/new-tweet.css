@@ -1,0 +1,34 @@
+.new-tweet {
+  text-align: left;
+}
+
+#tweet-text {
+  border: none;
+  background-color: inherit;
+  resize: none;
+  display: block;
+  width: 100%;
+  border-bottom: 4px solid #545149;
+  margin: 0.5em 0;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form div button {
+  background-color: #4056A1;
+  color: white;
+  font-family: "Bungee";
+  border: none;
+  padding: 5px 10px;
+}
+
+.counter {
+  font-family: "Bungee";
+}
+
+textarea:focus {
+  outline: 0;
+}
