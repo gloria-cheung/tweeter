@@ -25,7 +25,7 @@ $(document).ready(() => {
   };
 
   // helper function to prevent XSS with escaping
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -59,7 +59,7 @@ $(document).ready(() => {
           // to reset the form and then load the new tweet to top of container
           $("form").trigger("reset");
           loadTweets();
-        })
+        });
     }
   });
 
