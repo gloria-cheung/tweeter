@@ -52,7 +52,12 @@ textarea:focus {
 .tweet header, .tweet footer{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 0.5em;
+}
+
+.tweet header img {
+  width: 1.5em;
 }
 
 .tweet p {
