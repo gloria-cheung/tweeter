@@ -12,7 +12,7 @@ $(document).ready(() => {
         </header>
         <p>${tweetData.content.text}</p>
         <footer>
-          <span>${tweetData.created_at}</span>
+          <span>${timeago.format(tweetData.created_at)}</span>
           <span class="icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
