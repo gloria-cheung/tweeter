@@ -51,6 +51,16 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="error-long">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Tweet too long. Max 140 characters. Please try again
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div class="error-short">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Tweet cannot by empty. Please try again
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
         <form method="post" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
