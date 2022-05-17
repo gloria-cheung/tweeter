@@ -20,7 +20,7 @@ $(document).ready(() => {
           </span>
         </footer>
       </article>`
-    )
+    );
     return $tweet;
   };
 
@@ -41,8 +41,8 @@ $(document).ready(() => {
       method: "POST",
       url: "/tweets",
       data: data
-    })
-  })
+    });
+  });
 
   // using AJAX to do a GET req to retrieve json data from /tweets
   const loadTweets = function() {
@@ -51,9 +51,9 @@ $(document).ready(() => {
       url: "/tweets",
       dataType: "json"
     })
-    .then(function(data) {
-      renderTweets(data)
-    })
+      .then(function(data) {
+        renderTweets(data);
+      });
   };
   loadTweets();
-})
+});
