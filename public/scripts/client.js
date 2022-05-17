@@ -1,36 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(() => {
-  // Fake data taken from initial-tweets.json
-  const data = [
-      {
-        "user": {
-          "name": "Newton",
-          "avatars": "https://i.imgur.com/73hZDYK.png"
-          ,
-          "handle": "@SirIsaac"
-        },
-        "content": {
-          "text": "If I have seen further it is by standing on the shoulders of giants"
-        },
-        "created_at": 1461116232227
-      },
-      {
-        "user": {
-          "name": "Descartes",
-          "avatars": "https://i.imgur.com/nlhLi3I.png",
-          "handle": "@rd" },
-        "content": {
-          "text": "Je pense , donc je suis"
-        },
-        "created_at": 1461113959088
-      }
-    ]
-
+  //helper function to create new tweet html using tweet object
   const createTweetElement = function(tweetData) {
     const $tweet = $(`
       <article class = "tweet">
@@ -55,6 +24,7 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  // looping over tweets array to single out each object and create a new tweet
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -62,8 +32,7 @@ $(document).ready(() => {
     }
   };
 
-  renderTweets(data);
-
+  // using AJAX to do a POST req to /tweets and sending the form data
   $("form").on("submit", function(e) {
     e.preventDefault();
     const data = $(this).serialize();
@@ -75,4 +44,16 @@ $(document).ready(() => {
     })
   })
 
+  // using AJAX to do a GET req to retrieve json data from /tweets
+  const loadTweets = function() {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      dataType: "json"
+    })
+    .then(function(data) {
+      renderTweets(data)
+    })
+  };
+  loadTweets();
 })
