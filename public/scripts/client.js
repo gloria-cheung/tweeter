@@ -42,12 +42,13 @@ $(document).ready(() => {
   // using AJAX to do a POST req to /tweets and sending the form data
   $("form").on("submit", function(e) {
     e.preventDefault();
+    $(".error-long").hide();
+    $(".error-short").hide();
     const data = $(this).serialize();
-    console.log(data);
     if (data === "text=") {
-      alert("tweet cannot be empty")
+      $(".error-short").slideDown("slow");
     } else if (data.slice(5).length > 140) {
-      alert("tweet cannot be longer than 140 characters")
+      $(".error-long").slideDown("slow");
     } else {
       $.ajax({
         method: "POST",
