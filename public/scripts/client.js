@@ -48,6 +48,7 @@ $(document).ready(() => {
         data: data
       })
         .then(function() {
+          // to reset the form and then load the new tweet to top of container
           $("form").trigger("reset");
           loadTweets();
         })
