@@ -41,7 +41,11 @@ $(document).ready(() => {
       method: "POST",
       url: "/tweets",
       data: data
-    });
+    })
+      .then(function() {
+        $("form").trigger("reset");
+        loadTweets();
+      })
   });
 
   // using AJAX to do a GET req to retrieve json data from /tweets
