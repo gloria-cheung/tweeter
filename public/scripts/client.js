@@ -37,15 +37,21 @@ $(document).ready(() => {
     e.preventDefault();
     const data = $(this).serialize();
     console.log(data);
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: data
-    })
-      .then(function() {
-        $("form").trigger("reset");
-        loadTweets();
+    if (data === "text=") {
+      alert("tweet cannot be empty")
+    } else if (data.slice(5).length > 140) {
+      alert("tweet cannot be longer than 140 characters")
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: data
       })
+        .then(function() {
+          $("form").trigger("reset");
+          loadTweets();
+        })
+    }
   });
 
   // using AJAX to do a GET req to retrieve json data from /tweets
