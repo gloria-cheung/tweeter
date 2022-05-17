@@ -65,6 +65,7 @@ textarea:focus {
   padding:0.75em 0.5em 1.5em;
   border-bottom: 4px solid #545149;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .tweet footer {
