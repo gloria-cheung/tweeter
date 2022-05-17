@@ -10,7 +10,7 @@ $(document).ready(() => {
           </span>
           <span class="username">${tweetData.user.handle}</span>
         </header>
-        <p>${tweetData.content.text}</p>
+        <p>${escape(tweetData.content.text)}</p>
         <footer>
           <span>${timeago.format(tweetData.created_at)}</span>
           <span class="icons">
@@ -22,6 +22,13 @@ $(document).ready(() => {
       </article>`
     );
     return $tweet;
+  };
+
+  // helper function to prevent XSS with escaping
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   // looping over tweets array to single out each object and create a new tweet
