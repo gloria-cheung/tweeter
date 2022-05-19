@@ -75,4 +75,14 @@ $(document).ready(() => {
       });
   };
   loadTweets();
+
+  $(".toggleForm").click(function() {
+    $(".new-tweet").toggle("slow");
+    $("textarea").focus();
+  });
+
+  $(".toggleForm").hover(function() {
+    $(".arrow").toggleClass("translate");
+    $(this).toggleClass("hover");
+  });
 });
