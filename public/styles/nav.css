@@ -38,3 +38,10 @@ nav div {
   color: red;
 }
 
+.hover {
+  cursor: pointer;
+}
+
+.translate {
+  transform: translateY(3px);
+}
