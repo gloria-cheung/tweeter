@@ -1,5 +1,6 @@
 .new-tweet {
   text-align: left;
+  display: none;
 }
 
 #tweet-text {
