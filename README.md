@@ -2,17 +2,33 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This web application is focused on developing front end skills such as HTML, CSS, JS, jQuery and AJAX. Users are able to view current tweets and post new tweets using this app. 
+
+## Final Product
+
+Desktop View of Posted Tweets:
+!["posted tweets"](./docs/desktop_view.png)
+
+Desktop View of Creating New Tweet:
+!["create new tweet"](./docs/desktop_newtweet.png)
+
+Desktop View of New Tweet Posted:
+!["new tweet posted"](./docs/desktop_newtweet_posted.png)
+
+Mobile View of Creating New Tweet:
+!["create new tweet mobile"](./docs/mobile_view.png)
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+1. Install dependencies using the `npm install` command.
+2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Go to <http://localhost:8080/> in your browser.
+4. Create new tweet by clicking on the "Write a new tweet" button
 
 ## Dependencies
 
 - Express
-- Node 5.10.x or above
+- Node.js
+- Body-parser
+- Chance 
+- Md5
