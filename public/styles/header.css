@@ -34,3 +34,12 @@ h2 {
 .avatar {
   height: 150px;
 }
+
+@media (min-width:1024px) {
+ body > header {
+   width: 40%;
+   position: relative;
+   top: 120px;
+   margin: 3em 3em 0 1.5em;
+ } 
+}

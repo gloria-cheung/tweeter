@@ -27,3 +27,9 @@ main {
   text-align: center;
   background-color: #f4f1ec;
 }
+
+@media (min-width:1024px) {
+  body {
+    display: flex;
+  } 
+ }
