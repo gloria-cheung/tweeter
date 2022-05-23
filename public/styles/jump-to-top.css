@@ -1,0 +1,22 @@
+.scroll {
+  background-color: red;
+  color: white;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-scroll {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+.outer-scroll:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
