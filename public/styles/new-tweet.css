@@ -108,12 +108,15 @@ textarea:focus {
     position: relative;
     margin: 3em 1.5em 0 3em;
   } 
+
   .new-tweet h2 {
     margin-top: 0;
   }
+
   .tweet {
     margin: 0 0 2em 0;
   }
+  
   .new-tweet {
     margin-bottom: 1em;
   }
