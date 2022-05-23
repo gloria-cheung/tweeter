@@ -76,13 +76,24 @@ $(document).ready(() => {
   };
   loadTweets();
 
+  // form appears to create new tweet when click "write a new tweet"
   $(".toggleForm").click(function() {
     $(".new-tweet").toggle("slow");
     $("textarea").focus();
   });
-
   $(".toggleForm").hover(function() {
     $(".arrow").toggleClass("translate");
     $(this).toggleClass("hover");
   });
+
+  // button appears upon scrolling to bring user back to top and can create new tweet
+  $(document).scroll(function() {
+    $(".outer-scroll").show();
+  })
+  $(".outer-scroll").click(function() {
+    $(document).scrollTop(0, 0);
+    $(this).hide();
+    $(".new-tweet").show();
+    $("textarea").focus();
+  })
 });
