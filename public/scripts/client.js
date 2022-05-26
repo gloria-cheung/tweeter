@@ -92,7 +92,7 @@ $(document).ready(() => {
       .then(function(data) {
         renderTweets(data);
       })
-      .fail(function(err) {
+      .catch(function(err) {
         console.log("error:", err);
       });
   };
