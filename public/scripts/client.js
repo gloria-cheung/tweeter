@@ -62,7 +62,7 @@ $(document).ready(() => {
         })
         .fail(function(err) {
           console.log("error is:", err);
-        })
+        });
     }
   });
 
@@ -73,14 +73,14 @@ $(document).ready(() => {
       url: "/tweets",
       dataType: "json"
     })
-    .then(function(data) {
-      const newestTweet = (data.slice(data.length - 1));
-      renderTweets(newestTweet);
-    })
-    .catch(function(err) {
-      console.log("error is:", err);
-    })
-  }
+      .then(function(data) {
+        const newestTweet = (data.slice(data.length - 1));
+        renderTweets(newestTweet);
+      })
+      .catch(function(err) {
+        console.log("error is:", err);
+      });
+  };
 
   // using AJAX to do a GET req to retrieve json data from /tweets
   const loadTweets = function() {
@@ -111,11 +111,11 @@ $(document).ready(() => {
   // button appears upon scrolling to bring user back to top and can create new tweet
   $(document).scroll(function() {
     $(".outer-scroll").show();
-  })
+  });
   $(".outer-scroll").click(function() {
     $(document).scrollTop(0, 0);
     $(this).hide();
     $(".new-tweet").show();
     $("textarea").focus();
-  })
+  });
 });
