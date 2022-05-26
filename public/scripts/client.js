@@ -58,10 +58,29 @@ $(document).ready(() => {
         .then(function() {
           // to reset the form and then load the new tweet to top of container
           $("form").trigger("reset");
-          loadTweets();
-        });
+          loadLatestTweet();
+        })
+        .fail(function(err) {
+          console.log("error is:", err);
+        })
     }
   });
+
+  // using AJAX to load most recent tweet from form after posted to server
+  const loadLatestTweet = function() {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      dataType: "json"
+    })
+    .then(function(data) {
+      const newestTweet = (data.slice(data.length - 1));
+      renderTweets(newestTweet);
+    })
+    .catch(function(err) {
+      console.log("error is:", err);
+    })
+  }
 
   // using AJAX to do a GET req to retrieve json data from /tweets
   const loadTweets = function() {
@@ -72,6 +91,9 @@ $(document).ready(() => {
     })
       .then(function(data) {
         renderTweets(data);
+      })
+      .fail(function(err) {
+        console.log("error:", err);
       });
   };
   loadTweets();
