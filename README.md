@@ -2,7 +2,9 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This web application is focused on developing front end skills such as HTML, CSS, JS, jQuery and AJAX. Users are able to view current tweets and post new tweets using this app. 
+This web application is focused on developing front end skills such as HTML, CSS, JS, jQuery and AJAX. Users are able to view current tweets and post new tweets using this app.
+
+Deployed [here](https://tweeterclone-app.herokuapp.com/)
 
 ## Final Product
 
@@ -21,7 +23,7 @@ Mobile View of Creating New Tweet:
 ## Getting Started
 
 1. Install dependencies using the `npm install` command.
-2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+2. Start the web server using the `npm start` command. The app will be served at <http://localhost:8080/>.
 3. Go to <http://localhost:8080/> in your browser.
 4. Create new tweet by clicking on the "Write a new tweet" button
 
@@ -30,5 +32,5 @@ Mobile View of Creating New Tweet:
 - Express
 - Node.js
 - Body-parser
-- Chance 
+- Chance
 - Md5
